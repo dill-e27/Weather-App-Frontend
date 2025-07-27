@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <!-- Main container that displays all information -->
+    <div id="weather-container">
+        <h2>Weather App</h2>
+
+        <!-- Favorites container -->
+        <div id="top-bar">
+            <div id="favorites-bar"></div>
+        </div>
+
+        <!-- Search bar and button -->
+        <input type="text" id="city" placeholder="Enter City">
+        <button onclick="getWeather()">Search</button>
+        <!-- All weather information -->
+
+        <img id="weather-icon" alt="Weather Icon">
+        <div id="temp-div"></div>
+        <div id="weather-info"></div>
+        <div id="hourly-forecast"></div>
+        <div id="weekly-forecast-section">
+            <h3 id="weekly-heading">Weekly Forecast</h3>
+            <div id="weekly-forecast"></div>
+        </div>
+    </div>
+
+    <!-- Favortite button-->
+    <button id="favorite-btn" title="Add to favorites" disabled> &#9733; </button>
+
+    <!-- Max favorites warning container -->
+    <div id="max-fav-warning" class="warn hidden">
+        <div class="warn-content">
+            You already have 3 favorites. Click one to remove or cancel:
+            <div id="warn-favorites-list"></div>
+            <button onclick="closeWarn()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="./Script.js"></script>
+</body>
+</html>
