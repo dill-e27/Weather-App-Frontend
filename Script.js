@@ -48,7 +48,7 @@ function getWeather() {
         return;
     }
 
-    fetch(`/weather?city=${encodeURIComponent(city)}`)
+    fetch(`https://weather-app-backend-z5cf.onrender.com/weather?city=${encodeURIComponent(city)}`)
         .then(res => res.json())
         .then(data => {
             displayWeather(data.current);
