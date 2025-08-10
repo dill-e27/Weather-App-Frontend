@@ -48,7 +48,7 @@ function getWeather() {
         return;
     }
 
-    fetch(`https://weather-app-backend-g5xy.onrender.com/weather?city=${encodeURIComponent(city)}`)
+    fetch(`/weather?city=${encodeURIComponent(city)}`)
         .then(res => res.json())
         .then(data => {
             displayWeather(data.current);
@@ -236,6 +236,3 @@ window.addEventListener('resize', () => {
         container.style.height = '';
     }
 });
-
-
-
