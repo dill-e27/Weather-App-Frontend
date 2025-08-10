@@ -1,37 +1,30 @@
-/* Tap Highlight */
+/* General Reset and Tap Highlight */
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
 /* Body Styling */
-html {
-  height: auto;
-  min-height: 100vh;
-  overflow-y: auto;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  min-height: 100vh;
-  overflow-y: auto;
-  margin: 0;
-  background-repeat: no-repeat;
+    background: #216074;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    overflow-y: hidden;
 }
 
 /* Main Weather Container */
 #weather-container {
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  display: flexbox;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: center;
-  background: rgba(63, 63, 63, 0.3);
+    display: flexbox;
+    background: rgba(63, 63, 63, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
 }
 
 /* Typography */
@@ -240,16 +233,3 @@ button:hover {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
