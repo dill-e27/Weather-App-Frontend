@@ -12,7 +12,7 @@ const backgroundImages = [
 function setRandomBackground() {
     const randomIndex = Math.floor(Math.random() * backgroundImages.length);
     const selectedImage = backgroundImages[randomIndex];
-    document.body.style.backgroundImage = `url('${selectedImage}')`;
+    document.body.style.backgroundImage = url('${selectedImage}');
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundPosition = 'center';
 }
@@ -48,7 +48,7 @@ function getWeather() {
         return;
     }
 
-    fetch(`/weather?city=${encodeURIComponent(city)}`)
+    fetch(https://weather-app-backend-g5xy.onrender.com/weather?city=${encodeURIComponent(city)})
         .then(res => res.json())
         .then(data => {
             displayWeather(data.current);
@@ -70,7 +70,7 @@ function displayWeather(data) {
     tempDiv.innerHTML = '';
 
     if (data.cod === '404') {
-        infoDiv.innerHTML = `<p>${data.message}</p>`;
+        infoDiv.innerHTML = <p>${data.message}</p>;
         return;
     }
 
@@ -79,10 +79,10 @@ function displayWeather(data) {
 
     const temperature = Math.round(data.main.temp - 273.15);
     const description = data.weather[0].description;
-    const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+    const iconUrl = https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png;
 
-    tempDiv.innerHTML = `<p>${temperature}°C</p>`;
-    infoDiv.innerHTML = `<p>${currentCity}</p><p>${description}</p>`;
+    tempDiv.innerHTML = <p>${temperature}°C</p>;
+    infoDiv.innerHTML = <p>${currentCity}</p><p>${description}</p>;
     icon.src = iconUrl;
     icon.alt = description;
     showImage();
@@ -106,15 +106,15 @@ function displayHourlyForecast(hourlyData) {
         const time = new Date(item.dt * 1000);
         const hour = (time.getHours() % 12 || 12) + (time.getHours() >= 12 ? ' PM' : ' AM');
         const temp = Math.round(item.main.temp - 273.15);
-        const icon = `https://openweathermap.org/img/wn/${item.weather[0].icon}.png`;
+        const icon = https://openweathermap.org/img/wn/${item.weather[0].icon}.png;
 
-        hourlyDiv.innerHTML += `
+        hourlyDiv.innerHTML += 
             <div class="hourly-item">
                 <span>${hour}</span>
                 <img src="${icon}" alt="Hourly Icon">
                 <span>${temp}°C</span>
             </div>
-        `;
+        ;
     });
 }
 
@@ -135,17 +135,17 @@ function displayWeeklyForecast(hourlyData) {
         const avgTemp = Math.round(
             items.reduce((sum, i) => sum + i.main.temp, 0) / items.length - 273.15
         );
-        const icon = `https://openweathermap.org/img/wn/${items[0].weather[0].icon}.png`;
+        const icon = https://openweathermap.org/img/wn/${items[0].weather[0].icon}.png;
         const date = new Date(items[0].dt * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
-        weeklyDiv.innerHTML += `
+        weeklyDiv.innerHTML += 
             <div class="weekly-item">
                 <span>${day}</span>
                 <span>${date}</span>
                 <img src="${icon}" alt="Icon">
                 <span>${avgTemp}°C</span>
             </div>
-        `;
+        ;
     });
 }
 
