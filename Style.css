@@ -221,8 +221,10 @@ button:hover {
     #weather-container {
         width: 18em;
         height: auto;
-        max-height: 100vh;
+        max-height: 100dvh;
         overflow-y: auto;
+        box-sizing: border-box;
+        padding-bottom: 1em;
     }
     #hourly-forecast {
         overflow-x: scroll;
@@ -241,6 +243,7 @@ button:hover {
     }
 
 }
+
 
 
 
