@@ -6,7 +6,7 @@
 /* Body Styling */
 html {
   height: auto;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow-y: auto;
 }
 
@@ -16,7 +16,7 @@ body {
   align-items: center;
   justify-content: center;
   height: auto;
-  min-height: 100vh;
+  min-height: 100vdh;
   overflow-y: auto;
   margin: 0;
   background-repeat: no-repeat;
@@ -243,6 +243,7 @@ button:hover {
     }
 
 }
+
 
 
 
