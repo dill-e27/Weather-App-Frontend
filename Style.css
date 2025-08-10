@@ -1,18 +1,20 @@
-/* General Reset and Tap Highlight */
+/* Tap Highlight */
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
 /* Body Styling */
+html {
+    height: 100%;
+}
+
 body {
-    background: #216074;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     margin: 0;
-    overflow-y: hidden;
 }
 
 /* Main Weather Container */
@@ -233,3 +235,4 @@ button:hover {
     }
 
 }
+
