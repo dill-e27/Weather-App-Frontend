@@ -5,7 +5,8 @@
 
 /* Body Styling */
 html {
-  height: 100%;
+  height: auto;
+  overflow-y: auto;
 }
 
 body {
@@ -13,7 +14,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: auto;
   min-height: 100vh;
+  overflow-y: auto;
   margin: 0;
 }
 
@@ -235,6 +238,7 @@ button:hover {
     }
 
 }
+
 
 
 
