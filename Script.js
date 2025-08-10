@@ -12,9 +12,9 @@ const backgroundImages = [
 function setRandomBackground() {
     const randomIndex = Math.floor(Math.random() * backgroundImages.length);
     const selectedImage = backgroundImages[randomIndex];
-    document.html.style.backgroundImage = `url('${selectedImage}')`;
-    document.html.style.backgroundSize = 'cover';
-    document.html.style.backgroundPosition = 'center';
+    document.documentElement.style.backgroundImage = `url('${selectedImage}')`;
+    document.documentElement.style.backgroundSize = 'cover';
+    document.documentElement.style.backgroundPosition = 'center';
 }
 
 //DOMContentLoaded Setup
@@ -236,4 +236,5 @@ window.addEventListener('resize', () => {
         container.style.height = '';
     }
 });
+
 
